@@ -8,6 +8,7 @@ const hbs=require('hbs')
 const pathDir=path.join(__dirname, '../public')
 const viewpath=path.join(__dirname,'../templates/views')
 const partialpath=path.join(__dirname,'../templates/partials')
+const port=process.env.PORT || 3000
 app.set('view engine','hbs')
 app.set('views',viewpath)
 app.use(express.static(pathDir))
@@ -53,6 +54,6 @@ app.get('*',(req,res)=>{
     res.render('404',{title:'404 Page Not found', name: 'Avish Porwal'})
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server Stared !')
 })
