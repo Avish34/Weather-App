@@ -10,7 +10,7 @@ var forecast=(lat,lon,callback)=>{
         callback('Unable to find the location, Please check again',undefined)    
     else{
         callback(undefined,
-            {temp: response.body.current.temperature,City: response.body.location.name})
+            {temp: response.body.current.temperature,City: response.body.location.name, High: response.body.current.feelslike})
     }
 })
 }

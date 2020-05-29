@@ -38,7 +38,7 @@ app.get('/weather',(req,res)=>{
                 if(error)
                    return res.send({error: 'please send  correct address'})
                 
-                res.send({temperature: dat.temp,latitude: data.latitude, longitude: data.longitude, Location: dat.City})
+                res.send({temperature: dat.temp,latitude: data.latitude, longitude: data.longitude, Location: dat.City, feelslike: dat.High})
                 //console.log(dat.temp)   
                 }) 
             }  
